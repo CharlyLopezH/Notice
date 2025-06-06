@@ -10,7 +10,7 @@ import IndiceEntes from "./componentes/entes/IndiceEntes.tsx";
 createRoot(document.getElementById("root")!).render(
   <ThemeProvider theme={customTheme}>
       <StrictMode>
-      <IndiceEntes />
+      <IndiceEntes/>
       {/* <PruebaCors/> */}    
     </StrictMode>
   </ThemeProvider>

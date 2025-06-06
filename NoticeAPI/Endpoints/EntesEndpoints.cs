@@ -44,8 +44,7 @@ namespace NoticeAPI.Endpoints
         }
 
         //Regresa lista *paginada* de entes
-        static async Task<Ok<List<EnteDTO>>> Obtener(IRepositorioEntes repositorio, IMapper mapper,
-            int pagina = 1, int recordsPorPagina = 10)
+        static async Task<Ok<List<EnteDTO>>> Obtener(IRepositorioEntes repositorio, IMapper mapper, int pagina = 1, int recordsPorPagina = 10)
         {
             var paginacion = new PaginacionDTO { Pagina = pagina, RecordsPorPagina = recordsPorPagina };
             var entes = await repositorio.Obtener(paginacion);

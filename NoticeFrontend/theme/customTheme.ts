@@ -1,4 +1,3 @@
-import { Height } from "@mui/icons-material";
 import { createTheme } from "@mui/material";
 
 declare module '@mui/material/Paper' {
@@ -14,7 +13,18 @@ declare module '@mui/material/styles' {
       headerText: string;
     };
   }
+}
 
+declare module '@mui/material/Typography' {
+  interface TypographyPropsVariantOverrides {
+    paginationDisplay: true;
+  }
+}
+
+declare module '@mui/material/Box' {
+  interface BoxPropsVariantOverrides {
+    centered: true;
+  }
 }
 
 declare module '@mui/material/Button' {
@@ -23,32 +33,33 @@ declare module '@mui/material/Button' {
     neutral: true; // Opcional: puedes añadir otros colores personalizados
   }
 }
+
+
 //Vamos a sobrescribir algunos elementos del tema
 const customTheme=createTheme({
-    palette: { //Paleta General de colores
+  //   palette: { //Paleta General de colores
 
-    primary: {
-      main: "#3f51b5", // Azul Material (puedes cambiarlo)
-    },
-    warning: {
-      main: "#ff9800", // Naranja Material
-    },
-    success: { 
-      main: "#4caf50", // Verde Material
-    },
-    error: { 
-      main: "#f44336" 
-    },
-      info: { 
-        main: "#2196f3" 
-    },    
-  },  
+  //   primary: {
+  //     main: "#3f51b5", // Azul Material (puedes cambiarlo)
+  //   },
+  //   warning: {
+  //     main: "#ff9800", // Naranja Material
+  //   },
+  //   success: { 
+  //     main: "#4caf50", // Verde Material
+  //   },
+  //   error: { 
+  //     main: "#f44336" 
+  //   },
+  //     info: { 
+  //       main: "#2196f3" 
+  //   },    
+  // },  
     typography: {
-    fontFamily: "'Roboto', sans-serif", // Fuente personalizada    
+    fontFamily: '"Roboto", "Helvetica", "Arial"',  
   },  
-
   
-  components: {
+  components: { //COMPONENTES
 
 // MuiTable: {
 //       styleOverrides: {
@@ -63,6 +74,15 @@ const customTheme=createTheme({
 //       },
 //     },
 
+
+  MuiSelect: {
+    styleOverrides: {
+      select: {
+        minWidth: 120,
+        maxWidth:'20%',
+      }
+    }
+  },
  
       MuiTableCell: {
       styleOverrides: {
@@ -70,12 +90,15 @@ const customTheme=createTheme({
           
           height:'20px',
           padding: '2px 10px',  // Reduce el padding interno
-          lineHeight: '1'    // Ajusta el interlineado
+          lineHeight: '1',    // Ajusta el interlineado
+          fontSize:'10pt',
         }
       }
     },
 
-MuiTableRow: {
+    
+
+MuiTableRow: { //Alteración de los renglones de las tablas para índices
       styleOverrides: {
       root: {
         '&:nth-of-type(odd)': {
@@ -91,8 +114,9 @@ MuiTableRow: {
         }
       }
     },
+    
 
- MuiIconButton: {
+ MuiIconButton: { //Personalización de los botones MUI
       styleOverrides: {
         root: {
           padding: '2px', // Iconos ultra-compactos
@@ -106,12 +130,35 @@ MuiTableRow: {
     
     
 MuiTypography: {
+
+ variants: [
+        {
+          props: { variant: 'paginationDisplay' }, // Variante personalizada
+          style: {            
+          fontFamily: 'Roboto, sans-serif',
+          fontSize:'10pt',
+          color: 'text.secondary',
+          letterSpacing: '0.025em',
+          bgcolor: 'gray',
+          borderRadius: 5,
+          //border: '0.025em solid',
+          //border: '0.4px solid #ccc',
+          //borderColor: 'divider',
+          display: 'inline-flex',
+          alignItems: 'rigth',   
+          marginTop:'2px',
+          justifyContent: 'rigth',
+          padding:'8px',
+              }
+        }
+      ],
+
       styleOverrides: {
         h3: {
-          marginTop: '8px', // Equivalente a theme.spacing(1)
-          paddingTop: '16px', // Espacio interno arriba
-          paddingBottom: '16px', // Espacio interno abajo
-          backgroundColor: 'f4f4f6', // Fondo gris          
+          marginTop: '4px', // Equivalente a theme.spacing(1)
+          paddingTop: '8px', // Espacio interno arriba
+          paddingBottom: '8px', // Espacio interno abajo
+          backgroundColor: '#E0F2F1', // Fondo gris          
           display: 'block', '&:first-of-type': {
             marginTop: 0 // Evita espacio extra si es el primer elemento
           }
@@ -123,9 +170,25 @@ MuiTypography: {
           color: '#00ff00', // Verde directo
           padding: '16px',
           marginTop: '24px',
-        },
+        },        
 
       }
+    },
+
+    MuiPagination:{
+      styleOverrides:{
+        root:{          
+          display: 'flex',          
+          justifyContent: 'center', // Centrado horizontal
+          alignItems: 'center',    // Centrado vertical
+          backgroundColor: '#F5F5F5',
+          width: '100%',           // Asegura que ocupe todo el ancho
+          padding: '2px 0',       // Espaciado opcional
+          '& .MuiPagination-ul': { // Selector para el contenedor interno
+            flexWrap: 'nowrap',    // Evita saltos de línea
+          }
+        }
+     }
     },
 
     MuiTableHead: { //Encabezado de las tablas **header
@@ -151,7 +214,7 @@ MuiTypography: {
           style: {
             padding: 8,
             borderRadius: 4,
-            backgroundColor: "#f4f4f6", //Aplica un tono gris muy claro al encabezado de componente Paper-compact
+            backgroundColor: "#E0F2F1", //Aplica un tono gris muy claro al encabezado de componente Paper-compact
             marginTop: '.5%',
             marginBottom: '.5%'
           },

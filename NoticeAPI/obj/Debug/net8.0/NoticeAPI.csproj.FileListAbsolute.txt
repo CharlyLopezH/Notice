@@ -171,3 +171,4 @@ C:\Contra\sistemas\Desarrollos\2025\Notice\NoticeAPI\obj\Debug\net8.0\NoticeAPI.
 C:\Contra\sistemas\Desarrollos\2025\Notice\NoticeAPI\obj\Debug\net8.0\ref\NoticeAPI.dll
 C:\Contra\sistemas\Desarrollos\2025\Notice\NoticeAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Contra\sistemas\Desarrollos\2025\Notice\NoticeAPI\bin\Debug\net8.0\AutoMapper.dll
+C:\Contra\sistemas\Desarrollos\2025\Notice\NoticeAPI\obj\Debug\net8.0\NoticeAPI.sourcelink.json
