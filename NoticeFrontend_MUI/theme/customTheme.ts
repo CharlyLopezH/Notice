@@ -166,10 +166,10 @@ MuiTypography: {
         },
         
         h4: {
-                    backgroundColor: '#ff0000', // Rojo directo
-          color: '#00ff00', // Verde directo
-          padding: '16px',
-          marginTop: '24px',
+          backgroundColor: '#baf6f7', // Verde Menta
+          color: '#3f453f', // Verde directo
+          padding: '12px',
+          marginTop: '18px',
         },        
 
       }

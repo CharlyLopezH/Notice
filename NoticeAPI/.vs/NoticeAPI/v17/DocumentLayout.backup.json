@@ -60,7 +60,7 @@
               "RelativeDocumentMoniker": "Repositorios\\RepositorioEntes.cs",
               "ToolTip": "C:\\Contra\\sistemas\\Desarrollos\\2025\\Notice\\NoticeAPI\\Repositorios\\RepositorioEntes.cs",
               "RelativeToolTip": "Repositorios\\RepositorioEntes.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAmwD0AAABDAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAqwCQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T16:46:08.445Z",
               "EditorCaption": ""
@@ -75,8 +75,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAABUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T20:26:50.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T20:26:50.943Z"
             },
             {
               "$type": "Document",
@@ -100,8 +99,7 @@
               "RelativeToolTip": "Endpoints\\EntesEndpoints.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAAAEIAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T16:34:24.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T16:34:24.626Z"
             },
             {
               "$type": "Document",
@@ -125,8 +123,7 @@
               "RelativeToolTip": "Repositorios\\IRepositorioEntes.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAlwBAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T16:40:07.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T16:40:07.64Z"
             },
             {
               "$type": "Document",
@@ -150,8 +147,7 @@
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AgIAAAoAAAAAAAAAAAAkwBoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-16T19:36:09.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T19:36:09.834Z"
             }
           ]
         }

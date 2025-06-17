@@ -1,4 +1,4 @@
-import { Box, Grid, IconButton, Paper, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Tooltip, Typography } from "@mui/material"
+import { Box, IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Tooltip, Typography } from "@mui/material"
 import type { enteDTO } from "../../models/entes.model";
 import type { AxiosResponse } from "axios";
 import axios from "axios";
@@ -8,7 +8,7 @@ import MyCustomPagination from "../visuales/MyCustomPagination";
 import MySelectorRecords from "../visuales/MySelectorRecords";
 import BuscadorEntes from "./BuscadorEntes";
 import { urlEntes } from "../../utils/endpoints";
-//const [isSearching, setIsSearching] = useState(false);
+const [isSearching, setIsSearching] = useState(false);
 
 
 const IndiceEntes=()=>{
@@ -96,6 +96,7 @@ const IndiceEntes=()=>{
 if (cargando) return <div>Cargando...</div>;
  // Función de búsqueda (con tipado AxiosResponse) ** Función de búsqueda
   const handleSearch = async () => {
+    setIsSearching(true); // Activar carga
     if (searchTerm.trim().length < 1) return; //Si el string de búsqueda no tiene por lo menos dos caracteres no hace la búsqueda
     try { 
       const response: AxiosResponse<enteDTO[]> = await axios.get(
@@ -106,6 +107,8 @@ if (cargando) return <div>Cargando...</div>;
       setTotalDePaginas(1); // Resetear paginación durante búsqueda
     } catch (error) {
       console.error("Error al buscar:", error);
+    } finally {
+      setIsSearching(false); // Desactivar carga
     }
   };
 
@@ -148,6 +151,7 @@ if (cargando) return <div>Cargando...</div>;
         setSearchTerm={setSearchTerm}
         onHandleSearch={handleSearch}
         fetchData={fetchInitialData}
+        loading={isSearching}
       />
     </Box>
   </Box>    
